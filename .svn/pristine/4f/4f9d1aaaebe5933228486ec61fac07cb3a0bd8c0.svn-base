@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{e6a56392-aacb-4e03-83d4-b1776492522b}</ProjectGuid>
+    <avrdevice>AT90CAN128</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>EcoSatBusRTOS</AssemblyName>
+    <Name>EcoSatBusRTOS</Name>
+    <RootNamespace>EcoSatBusRTOS</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <CacheFlash>true</CacheFlash>
+    <UncachedRange />
+    <BootSegment>2</BootSegment>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.8.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtoolinterface>JTAG</avrtoolinterface>
+    <avrtool>com.atmel.avrdbg.tool.jtagice3plus</avrtool>
+    <com_atmel_avrdbg_tool_jtagicemk3>
+      <ToolType>com.atmel.avrdbg.tool.jtagicemk3</ToolType>
+      <ToolName>JTAGICE3</ToolName>
+      <ToolNumber>J30200012280</ToolNumber>
+      <StimuliFile>
+      </StimuliFile>
+      <Channel>
+        <host>127.0.0.1</host>
+        <port>49590</port>
+        <ssl>False</ssl>
+      </Channel>
+      <ToolOptions>
+        <InterfaceName>JTAG</InterfaceName>
+        <InterfaceProperties>
+          <JtagDbgClock>0</JtagDbgClock>
+          <SwdClock>249000</SwdClock>
+          <JtagProgClock>7500000</JtagProgClock>
+          <IspClock>125000</IspClock>
+          <JtagInChain>false</JtagInChain>
+          <JtagEnableExtResetOnStartSession>false</JtagEnableExtResetOnStartSession>
+          <JtagDevicesBefore>0</JtagDevicesBefore>
+          <JtagDevicesAfter>0</JtagDevicesAfter>
+          <JtagInstrBitsBefore>0</JtagInstrBitsBefore>
+          <JtagInstrBitsAfter>0</JtagInstrBitsAfter>
+          <PdiClock>4000000</PdiClock>
+          <AWireMaxBaud>7500000</AWireMaxBaud>
+        </InterfaceProperties>
+      </ToolOptions>
+    </com_atmel_avrdbg_tool_jtagicemk3>
+    <com_atmel_avrdbg_tool_jtagice3plus>
+      <ToolOptions>
+        <InterfaceProperties>
+          <IspClock>125000</IspClock>
+          <JtagDbgClock>200000</JtagDbgClock>
+        </InterfaceProperties>
+        <InterfaceName>JTAG</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.jtagice3plus</ToolType>
+      <ToolNumber>J30200012280</ToolNumber>
+      <ToolName>JTAGICE3</ToolName>
+    </com_atmel_avrdbg_tool_jtagice3plus>
+    <com_atmel_avrdbg_tool_ispmk2>
+      <ToolOptions>
+        <InterfaceProperties>
+          <IspClock>125000</IspClock>
+        </InterfaceProperties>
+        <InterfaceName>ISP</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.ispmk2</ToolType>
+      <ToolNumber>000200154480</ToolNumber>
+      <ToolName>AVRISP mkII</ToolName>
+    </com_atmel_avrdbg_tool_ispmk2>
+    <preserveEEPROM>true</preserveEEPROM>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../Include</Value>
+            <Value>../RTOS/include</Value>
+            <Value>../RTOS/portable/GCC/AT90CAN128</Value>
+            <Value>../Librarys/adc</Value>
+            <Value>../Librarys/can</Value>
+            <Value>../Librarys/eeprom</Value>
+            <Value>../Librarys/spi</Value>
+            <Value>../Librarys/uart</Value>
+            <Value>../Librarys/isp</Value>
+            <Value>../Librarys/ADT7320</Value>
+            <Value>../Librarys/lib_board</Value>
+            <Value>../Librarys/lib_board/key</Value>
+            <Value>../Librarys/lib_board/led</Value>
+            <Value>../Librarys/lib_board/sensor</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ACS_main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\ACS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\ADT7320_TemperatureSensor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\ADT7320_TemperatureSensor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\compiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\dataTypes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\Ecosat2_CANBus.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\Ecosat2_CANBus.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\degauss.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\degauss.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\Ecosat2_messages.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\Ecosat2_UART.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\Ecosat2_UART.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\FreeRTOSConfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\protocol.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\adc\adc_drv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\adc\adc_drv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\can\at90can_drv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\can\can_drv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\can\can_drv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\can\can_isp_protocol.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\can\can_isp_protocol.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\can\can_lib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\can\can_lib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\eeprom\eeprom_drv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\eeprom\eeprom_lib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\eeprom\eeprom_lib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\i2c\i2cmaster.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\i2c\twimaster.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\lib_board\dvk90can1_board.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\spi\spi_drv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\spi\spi_lib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\spi\spi_lib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\uart\uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Librarys\uart\uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\croutine.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\include\croutine.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\include\FreeRTOS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\include\list.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\include\mpu_wrappers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\include\portable.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\include\projdefs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\include\queue.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\include\semphr.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\include\StackMacros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\include\task.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\include\timers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\list.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\portable\GCC\AT90CAN128\port.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\portable\GCC\AT90CAN128\portmacro.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\portable\MemMang\heap_1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\queue.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\tasks.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\timers.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Include\" />
+    <Folder Include="Librarys" />
+    <Folder Include="Librarys\adc" />
+    <Folder Include="Librarys\can" />
+    <Folder Include="Librarys\eeprom" />
+    <Folder Include="Librarys\i2c" />
+    <Folder Include="Librarys\lib_board" />
+    <Folder Include="Librarys\spi" />
+    <Folder Include="Librarys\uart" />
+    <Folder Include="RTOS\" />
+    <Folder Include="RTOS\include\" />
+    <Folder Include="RTOS\portable\" />
+    <Folder Include="RTOS\portable\GCC\" />
+    <Folder Include="RTOS\portable\GCC\AT90CAN128\" />
+    <Folder Include="RTOS\portable\MemMang\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Librarys\adc\adc_lib.c.back">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Librarys\adc\adc_lib.h.back">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="RTOS\readme.txt">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

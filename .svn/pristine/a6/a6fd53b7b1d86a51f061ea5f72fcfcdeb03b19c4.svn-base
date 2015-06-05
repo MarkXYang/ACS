@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "EcoSatBusRTOS", "EcoSatBusRTOS.cproj", "{E6A56392-AACB-4E03-83D4-B1776492522B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6A56392-AACB-4E03-83D4-B1776492522B}.Debug|AVR.ActiveCfg = Debug|AVR
+		{E6A56392-AACB-4E03-83D4-B1776492522B}.Debug|AVR.Build.0 = Debug|AVR
+		{E6A56392-AACB-4E03-83D4-B1776492522B}.Release|AVR.ActiveCfg = Release|AVR
+		{E6A56392-AACB-4E03-83D4-B1776492522B}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
